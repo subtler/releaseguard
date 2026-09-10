@@ -11,6 +11,18 @@ The current product is local-first, fully offline, and does **not** call OpenAI 
 model API. Model-assisted analysis will be an optional, verifier-bounded layer—not a requirement for
 the trustworthy baseline.
 
+## Try the interactive app
+
+Run the reviewer-facing Streamlit interface locally:
+
+```bash
+uv run streamlit run streamlit_app.py
+```
+
+Start with the bundled payment-service example—no repository or API key is required. The app can
+also import recent history from a public `github.com` repository using a credential-free, shallow,
+time-bounded clone. It never accepts private repository credentials.
+
 ## Why this is not another chat demo
 
 - **Commit-pinned evidence:** refs are resolved to immutable SHAs before analysis.
@@ -149,11 +161,11 @@ uv run releaseguard analyze ...
 - [x] CLI and FastAPI interfaces
 - [x] Versioned evaluation dataset and CI quality gates
 - [x] OpenTelemetry tracing with no-op, console, and OTLP modes
+- [x] Reviewer-facing Streamlit interface with a bundled end-to-end demo
 - [ ] Language-agnostic parsing via tree-sitter
 - [ ] Persistent incremental retrieval index for very large repositories
 - [ ] Optional local generative model for evidence-bounded synthesis
 - [ ] Adversarial retrieval, trajectory, and groundedness evaluation suite
-- [ ] Reviewer-facing web interface
 - [ ] PostgreSQL checkpointer for multi-worker operation
 
 ## Honest limitations

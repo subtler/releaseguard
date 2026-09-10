@@ -59,7 +59,7 @@ class PythonImpactAnalyzer:
             dependent
             for changed in changed_modules
             for dependent in reverse_graph.get(changed, set())
-        }
+        } - changed_modules
         transitive_modules = self._transitive_dependents(
             changed_modules, reverse_graph, direct_modules
         )
