@@ -13,6 +13,8 @@ the trustworthy baseline.
 
 ## Try the interactive app
 
+[**Open the live ReleaseGuard app →**](https://releaseguard-ai.streamlit.app/)
+
 Run the reviewer-facing Streamlit interface locally:
 
 ```bash
