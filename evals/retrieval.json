@@ -1,0 +1,46 @@
+[
+  {
+    "name": "authorization change finds security runbook",
+    "changed_paths": ["src/app/auth.py"],
+    "diff_text": "authorization roles now enforce default deny permissions",
+    "documents": {
+      "docs/security-runbook.md": "Authorization incident runbook for roles, permissions, and default-deny access.",
+      "docs/billing.md": "Invoice reconciliation and payment settlement operations.",
+      "docs/cache.md": "Cache eviction and time-to-live tuning."
+    },
+    "relevant_paths": ["docs/security-runbook.md"]
+  },
+  {
+    "name": "schema change finds migration guide",
+    "changed_paths": ["db/migrations/004_orders.sql"],
+    "diff_text": "alter table orders add column status rollback migration",
+    "documents": {
+      "docs/migrations.md": "Database schema migration, rollback, compatibility, and backfill checklist.",
+      "docs/frontend.md": "Browser layout and visual regression guide.",
+      "docs/auth.md": "Session authentication behavior."
+    },
+    "relevant_paths": ["docs/migrations.md"]
+  },
+  {
+    "name": "delivery change finds release procedure",
+    "changed_paths": [".github/workflows/release.yml"],
+    "diff_text": "deployment rollout health check artifact provenance rollback",
+    "documents": {
+      "docs/release-procedure.md": "Deployment rollout, artifact verification, health checks, and rollback procedure.",
+      "docs/search.md": "Search indexing and ranking notes.",
+      "docs/database.md": "Database query optimization."
+    },
+    "relevant_paths": ["docs/release-procedure.md"]
+  },
+  {
+    "name": "dependency change finds supply chain policy",
+    "changed_paths": ["pyproject.toml"],
+    "diff_text": "dependency version package license vulnerability supply chain",
+    "documents": {
+      "docs/dependency-policy.md": "Package dependency licensing, vulnerability review, and supply-chain controls.",
+      "docs/api.md": "HTTP request and response examples.",
+      "docs/ui.md": "User-interface component conventions."
+    },
+    "relevant_paths": ["docs/dependency-policy.md"]
+  }
+]

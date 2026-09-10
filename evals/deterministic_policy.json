@@ -1,0 +1,50 @@
+[
+  {
+    "name": "documentation-only change",
+    "changed_paths": ["docs/operations.md"],
+    "expected_status": "ready",
+    "expected_categories": []
+  },
+  {
+    "name": "authorization boundary change",
+    "changed_paths": ["src/service/auth/permissions.py"],
+    "expected_status": "review_required",
+    "expected_categories": ["security"]
+  },
+  {
+    "name": "database migration",
+    "changed_paths": ["alembic/versions/004_add_tenant.py"],
+    "expected_status": "review_required",
+    "expected_categories": ["database"]
+  },
+  {
+    "name": "delivery workflow",
+    "changed_paths": [".github/workflows/release.yml"],
+    "expected_status": "review_required",
+    "expected_categories": ["delivery"]
+  },
+  {
+    "name": "credential-shaped file",
+    "changed_paths": [".env.production"],
+    "expected_status": "blocked",
+    "expected_categories": ["credentials"]
+  },
+  {
+    "name": "locked dependency update",
+    "changed_paths": ["uv.lock"],
+    "expected_status": "ready",
+    "expected_categories": ["dependencies"]
+  },
+  {
+    "name": "combined infrastructure and schema risk",
+    "changed_paths": ["infra/main.tf", "db/schema.sql"],
+    "expected_status": "review_required",
+    "expected_categories": ["database", "delivery"]
+  },
+  {
+    "name": "ordinary application change",
+    "changed_paths": ["src/releaseguard/api.py"],
+    "expected_status": "ready",
+    "expected_categories": []
+  }
+]
